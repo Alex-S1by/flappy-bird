@@ -35,9 +35,9 @@ let bottompipeimg;
 
 
 //move
-let velocityx=-2;
+let velocityx=-4;
 let velocityy=0;
-let gravity=0.3;
+let gravity=0.2;
 
 
 //score
