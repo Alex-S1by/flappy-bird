@@ -87,8 +87,8 @@ birdimg.onload = function() {
   requestAnimationFrame(update)
   setInterval(placepipe,1500)
 
-
-  document.addEventListener("keydown",movebird)
+  document.addEventListener("click",movebird);
+  document.addEventListener("keydown",movebird);
 }
 
 
@@ -128,7 +128,7 @@ bird.y=Math.min(bird.y,512);
 if(bird.y>=boardheight||bird.y<=0)
 {
   
-  console.log("failed");
+
   gameover=true;
 }
   ctx.drawImage(birdimg, bird.x, bird.y,bird.width,bird.height);
@@ -144,7 +144,7 @@ if(bird.y>=boardheight||bird.y<=0)
     {
       score+=0.5;
       pipe.ispassed=true;
-      console.log(score);
+      
       scoreElement.innerHTML=score;
     }
 
@@ -205,6 +205,12 @@ function movebird(e){
   }
 
 
+  if (e.type === "click" || e.type === "touchstart") {
+    velocityy = -6;
+  }
+
+
+
 
 }
 
@@ -226,6 +232,6 @@ function restart()
   score=0;
   scoreElement.innerHTML=0;
   gameover=false;
-  console.log(bird);
+ 
   document.getElementById("gameover-section").style.display = "none";
 }
