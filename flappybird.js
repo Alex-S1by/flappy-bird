@@ -37,7 +37,7 @@ let bottompipeimg;
 //move
 let velocityx=-2;
 let velocityy=0;
-let gravity=0.3;
+let gravity=0.2;
 
 
 //score
@@ -201,12 +201,12 @@ function movebird(e){
 
   if(e.code=="Space"||e.code=="ArrowUp")
   {
-     velocityy=-6;
+     velocityy=-5;
   }
 
 
   if (e.type === "click" || e.type === "touchstart") {
-    velocityy = -6;
+    velocityy = -5;
   }
 
 
